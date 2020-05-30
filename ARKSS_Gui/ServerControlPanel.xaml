@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ARKSS_Gui"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="600" d:DesignWidth="1200">
     <Grid>
 
         <Grid.RowDefinitions>
@@ -15,14 +15,14 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="250"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
 
-        <Label Grid.Column="0" Grid.Row="0">Папка сервера</Label>
-        <Label Grid.Column="0" Grid.Row="1">Имя сервера</Label>
-        <Label Grid.Column="0" Grid.Row="2">Список модов (через запятую)</Label>
+        <TextBlock Grid.Column="0" Grid.Row="0" Style="{DynamicResource MaterialDesignBody1TextBlock}">Папка сервера</TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="1" Style="{DynamicResource MaterialDesignBody1TextBlock}">Имя сервера</TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="2" Style="{DynamicResource MaterialDesignBody1TextBlock}">Список модов (через запятую)</TextBlock>
 
         <TextBox Grid.Column="1" Grid.Row="0" VerticalContentAlignment="Center" IsReadOnly="True"
                  DataContext="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ServerControlPanel}}, Path=ArkServer}"
@@ -39,22 +39,27 @@
         <StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal">
 
             <Button  HorizontalAlignment="Left" Margin="3" Background="DodgerBlue" Foreground="AliceBlue"
+                     Style="{DynamicResource MaterialDesignFlatAccentButton}"
                      Content="Обновить\Установить"
                      Click="ButtonBase_OnInstallServer"/>
 
             <Button  HorizontalAlignment="Left" Margin="3" Background="Green" Foreground="AliceBlue"
+                     Style="{DynamicResource MaterialDesignFlatAccentButton}"
                      Content="Запустить"
                      Click="ButtonBase_OnRun"/>
 
             <Button  HorizontalAlignment="Left" Margin="3" Background="YellowGreen" Foreground="AliceBlue"
+                     Style="{DynamicResource MaterialDesignFlatAccentButton}"
                      Content="Остановить"
                      Click="ButtonBase_OnStop"/>
 
             <Button  HorizontalAlignment="Left" Margin="3" Background="DarkRed" Foreground="AliceBlue"
+                     Style="{DynamicResource MaterialDesignFlatAccentButton}"
                      Content="Удалить"
                      Click="ButtonBase_OnDelete"/>
 
             <Button  HorizontalAlignment="Left" Margin="3" Background="DarkBlue" Foreground="AliceBlue"
+                     Style="{DynamicResource MaterialDesignFlatAccentButton}"
                      Content="Игроки (0)"
                      Click="ButtonBase_OnPlayerList"/>
             

@@ -50,7 +50,7 @@ namespace ARKSS_Gui
             var message = $"[{e.Timestamp}] {e.Level}: {e.RenderMessage()}\r\n";
 
             if (e.Exception != null)
-                message += $"{e.Exception.Message}\r\n";
+                message += $"{e.Exception}\r\n";
 
             MessagesBox.AppendText(message);
             MessagesBox.ScrollToEnd();

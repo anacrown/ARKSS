@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using Serilog;
@@ -15,13 +16,14 @@ namespace ARKSS_Gui
     public partial class App : Application
     {
         private ILogger _logger;
-        private ILogger Logger => _logger ?? (_logger = Log.Logger.ForContext("ClassType", GetType()));
+        private ILogger Logger => _logger ??= Log.Logger.ForContext("ClassType", GetType());
 
         protected override void OnStartup(StartupEventArgs e)
         {
-            base.OnStartup(e);
-
             SetupExceptionHandling();
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+
+            base.OnStartup(e);
         }
 
         private void SetupExceptionHandling()
@@ -44,10 +46,10 @@ namespace ARKSS_Gui
 
         private void LogUnhandledException(Exception exception, string source)
         {
-            string message = $"Unhandled exception ({source})";
+            var message = $"Unhandled exception ({source})";
             try
             {
-                System.Reflection.AssemblyName assemblyName = System.Reflection.Assembly.GetExecutingAssembly().GetName();
+                var assemblyName = System.Reflection.Assembly.GetExecutingAssembly().GetName();
                 message = string.Format("Unhandled exception in {0} v{1}", assemblyName.Name, assemblyName.Version);
             }
             catch (Exception ex)

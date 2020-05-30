@@ -67,9 +67,9 @@ namespace ARKSS_Gui.Buisiness
             if (!Directory.Exists(Dir))
                 Directory.CreateDirectory(Dir);
 
-            var mods = Mods.Split(',').Select(id => id.Trim()).Select(modId => (workshopId: Steam.ArkWorkshopId, modId: modId)).ToList();
+            var mods = Mods.Split(',').Select(id => id.Trim()).Select(modId => (workshopId: SteamCmd.ArkWorkshopId, modId: modId)).ToList();
 
-            Steam.Update(Dir, Steam.ArkServerId, mods.ToArray());
+            SteamCmd.Instance.UpdateApp(Dir, SteamCmd.ArkServerId, mods.ToArray());
 
             var modsDir = Path.Combine(Dir, "ShooterGame", "Content", "Mods");
 

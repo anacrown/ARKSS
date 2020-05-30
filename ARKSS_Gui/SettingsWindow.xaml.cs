@@ -2,6 +2,8 @@
 using System.Runtime.CompilerServices;
 using System.Windows;
 using ARKSS_Gui.Annotations;
+using ARKSS_Gui.Buisiness;
+using Ookii.Dialogs.Wpf;
 
 namespace ARKSS_Gui
 {
@@ -34,6 +36,34 @@ namespace ARKSS_Gui
                 Properties.Settings.Default.Save();
                 OnPropertyChanged();
             }
+        }
+
+        private void SelectSteamCmdDir()
+        {
+            var folderBrowserDialog = new VistaFolderBrowserDialog { ShowNewFolderButton = true };
+
+            if (folderBrowserDialog.ShowDialog(this) == true)
+                SteamCmdDir = folderBrowserDialog.SelectedPath;
+        }
+
+        private void SelectServersDir()
+        {
+            var folderBrowserDialog = new VistaFolderBrowserDialog { ShowNewFolderButton = true };
+
+            if (folderBrowserDialog.ShowDialog(this) == true)
+                ServersDir = folderBrowserDialog.SelectedPath;
+        }
+
+        private void ButtonBase_OnSelectSteamCmdDir(object sender, RoutedEventArgs e) => SelectSteamCmdDir();
+
+        private void ButtonBase_OnSelectServersDir(object sender, RoutedEventArgs e) => SelectServersDir();
+
+        private void ButtonBase_OnSteamCmdInstall(object sender, RoutedEventArgs e)
+        {
+            while (string.IsNullOrEmpty(SteamCmdDir))
+                SelectSteamCmdDir();
+
+            SteamCmd.Instance.Install();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

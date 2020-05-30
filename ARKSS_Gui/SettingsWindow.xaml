@@ -4,12 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ARKSS_Gui"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Title="SettingsWindow" Height="300" Width="600">
     <Grid VerticalAlignment="Center" Margin="30, 0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="120"/>
             <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -19,11 +21,20 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <Label Grid.Row="0" Grid.Column="0">SteamCMD Dir</Label>
-        <Label Grid.Row="1" Grid.Column="0">Servers Dir</Label>
+        <TextBlock Grid.Row="0" Grid.Column="0" Style="{DynamicResource MaterialDesignBody1TextBlock}">SteamCMD Dir</TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="0" Style="{DynamicResource MaterialDesignBody1TextBlock}">Servers Dir</TextBlock>
 
         <TextBox Grid.Row="0" Grid.Column="1" VerticalContentAlignment="Center" Text="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:SettingsWindow}}, Path=SteamCmdDir, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
         <TextBox Grid.Row="1" Grid.Column="1" VerticalContentAlignment="Center" Text="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:SettingsWindow}}, Path=ServersDir, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+
+        <Button Grid.Row="0" Grid.Column="2" Style="{DynamicResource MaterialDesignFlatButton}" Content="{materialDesign:PackIcon FolderEdit}"
+                Click="ButtonBase_OnSelectSteamCmdDir"/>
+
+        <Button Grid.Row="1" Grid.Column="2" Style="{DynamicResource MaterialDesignFlatButton}" Content="{materialDesign:PackIcon FolderEdit}"
+                Click="ButtonBase_OnSelectServersDir"/>
+
+        <Button Grid.Row="0" Grid.Column="3" Style="{DynamicResource MaterialDesignFlatButton}" Content="{materialDesign:PackIcon Download}"
+                Click="ButtonBase_OnSteamCmdInstall"/>
 
     </Grid>
 </Window>

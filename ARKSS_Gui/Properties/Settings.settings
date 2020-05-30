@@ -8,5 +8,8 @@
     <Setting Name="ServersDir" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="SteamCmdDownloadLink" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://steamcdn-a.akamaihd.net/client/installer/steamcmd.zip</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
