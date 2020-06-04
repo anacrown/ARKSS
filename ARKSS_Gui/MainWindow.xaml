@@ -41,7 +41,7 @@
                     <local:ServerControlPanel ArkServer="{Binding}"/>
                 </GroupBox>
                 <GroupBox Grid.Row="1" Header="Конфигурация">
-                    <local:ServerConfigManager/>
+                    <local:ServerConfigManager ArkServer="{Binding}"/>
                 </GroupBox>
             </Grid>
         </DataTemplate>

@@ -1,63 +1,54 @@
-﻿using System.ComponentModel;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using ARKSS_Gui.Annotations;
+using Salaros.Configuration;
 using Serilog;
 
 namespace ARKSS_Gui.Buisiness
 {
-    public class ArkServer : INotifyPropertyChanged
+    public class ArkServer
     {
-        private string _name;
-        private string _dir;
-        private string _mods;
+        public string Name;
 
-        private readonly ILogger _logger;
+        public string Dir;
 
-        public string Name
+        public string Mods;
+
+        public Dictionary<string, ConfigParser> Settings;
+
+        private ILogger _logger;
+
+        public ArkServer(string dir = null)
         {
-            get => _name;
-            set
-            {
-                if (value == _name) return;
-                _name = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public string Dir
-        {
-            get => _dir;
-            set
-            {
-                if (value == _dir) return;
-                _dir = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public string Mods
-        {
-            get => _mods;
-            set
-            {
-                if (value == _mods) return;
-                _mods = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public ArkServer(string name, string dir, string mods)
-        {
-            Name = name;
             Dir = dir;
-            Mods = mods;
 
-            _logger = Log.Logger
-                .ForContext("ClassName", GetType())
-                .ForContext("ServerName", Name)
-                .ForContext("Directory", Dir);
+            _logger = Log.Logger.ForContext("ClassName", GetType());
+
+            if (!string.IsNullOrEmpty(dir))
+                Load(dir);
+        }
+
+        public void Load(string dir)
+        {
+            Dir = dir;
+
+            var configFiles = new[] {
+                Path.Combine(Dir, "ShooterGame", "Saved", "Config", "WindowsServer", "Game.ini"),
+                Path.Combine(Dir, "ShooterGame", "Saved", "Config", "WindowsServer", "GameUserSettings.ini")
+            };
+
+            Settings = configFiles.ToDictionary(file => file, file => new ConfigParser(file));
+
+            Name = Settings[configFiles[1]].GetValue("SessionSettings", "SessionName");
+            Mods = Settings[configFiles[1]].GetValue("ServerSettings", "ActiveMods");
+            
+            _logger = _logger.ForContext("ServerName", Name)
+                             .ForContext("Directory", Dir);
         }
 
         public void Update()
@@ -96,4 +87,6 @@ namespace ARKSS_Gui.Buisiness
         [NotifyPropertyChangedInvocator]
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
+
+
 }

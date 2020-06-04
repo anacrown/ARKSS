@@ -1,0 +1,1013 @@
+{
+  "RunServer.cmd": {
+    "arguments": [
+      {
+        "argument": "-allcores",
+        "platform": "?",
+        "effect": "?"
+      },
+      {
+        "argument": "-UseDynamicConfig",
+        "platform": "all",
+        "effect": "enables the use of the dynamic config, if you dont provide a customdynamicconfigurl the server will use the default dynamic config for that platform (the one used on official server)  NOTE: It takes about 15 minutes for the config to take effect after the file has been changed. When you want to \"undo\" the config you should be changing it back to whatever your default is.Introduced in patch 307.2"
+      },
+      {
+        "argument": "?customdynamicconfigurl=<link>",
+        "platform": "all",
+        "effect": "direct link to config file e.g.: arkdedicated.com/dynamicconfig.ini ; This flag has to be at the end of your commandline currently only the following options are supported to be adjusted dynamically: TamingSpeedMultiplier, HarvestAmountMultiplier, XPMultiplier, MatingIntervalMultiplier, BabyMatureSpeedMultiplier, EggHatchSpeedMultiplier Introduced in patch 307.2"
+      },
+      {
+        "argument": "-allowansel",
+        "platform": "?",
+        "effect": "Activates NVIDIA Ansel support, in single player.  When connecting to a server, this will cause most lights (lamps) to no longer function, even when powered and lit.Introduced in patch 246.0"
+      },
+      {
+        "argument": "?AllowAnyoneBabyImprintCuddle=true",
+        "platform": "",
+        "effect": "Use this if you want ANYONE to be able to \"take care\" of a Baby Dino (cuddle etc.), not just whomever Imprinted on it."
+      },
+      {
+        "argument": "?AllowCrateSpawnsOnTopOfStructures=true",
+        "platform": "",
+        "effect": "Servers can now allow from-the-air Supply Crates to appear on top of Structures, rather than being prevented by Structures."
+      },
+      {
+        "argument": "?AllowFlyerCarryPvE=true",
+        "platform": "",
+        "effect": "Flyers on PvE can carry wild dinos."
+      },
+      {
+        "argument": "?AllowFlyingStaminaRecovery=false",
+        "platform": "",
+        "effect": "Set to true if flyers should recover stamina when player is standing on instead riding."
+      },
+      {
+        "argument": "?AllowMultipleAttachedC4=false",
+        "platform": "",
+        "effect": "Set to true to allow to attach more than one C4 per dino."
+      },
+      {
+        "argument": "?AutoDestroyDecayedDinos=true",
+        "platform": "",
+        "effect": "Auto-destroy claimable decayed dinos on load, rather than have them remain around as Claimable.Introduced in patch 255.0"
+      },
+      {
+        "argument": "-automanagedmods",
+        "platform": "All",
+        "effect": "Automatic MOD download/installation/updating. Introduced in patch 244.3"
+      },
+      {
+        "argument": "bAppendItemSets=false",
+        "platform": "",
+        "effect": "Set to true to add item sets to supply crates, rather than overriding all their items. See ConfigOverrideSupplyCrateItemsIntroduced in patch 273.7"
+      },
+      {
+        "argument": "bAppendPreventIncreasingMinMaxItemSets=false",
+        "platform": "",
+        "effect": "Set to true to dynamically increase the amount of items dropped. See ConfigOverrideSupplyCrateItemsIntroduced in patch 273.7"
+      },
+      {
+        "argument": "?ClampItemSpoilingTimes=true",
+        "platform": "",
+        "effect": "Will clamp all spoiling times to the items' maximum spoiling times. Could potentially cause issues with Mods that alter spoiling time.Introduced in patch 254.944"
+      },
+      {
+        "argument": "?ClampItemStats=true",
+        "platform": "",
+        "effect": "Enable/Disable stats clamping for items. See ItemStatClamps for more info.Introduced in patch 255.0"
+      },
+      {
+        "argument": "-ClearOldItems",
+        "platform": "All",
+        "effect": "Official PvP servers one-time Clearance of all old unequipped items (with the exception of blueprints, eatables, notes, and quest items), to ensure fairness after Item Duplication bug exploit. Server admins can enforce this once if they run with this command argument (will only work ONCE' on pre-update save games)Introduced in patch 178.0"
+      },
+      {
+        "argument": "-culture=??",
+        "platform": "All",
+        "effect": "You can directly override the language by using this commandline. List of currently supported language codes: ca, cs, da, de, en, es, eu, fi, fr, hu, it, ja, ka, ko, nl, pl, pt_BR, ru, sv, th, tr, zh, zh-Hans-CN, zh-TW"
+      },
+      {
+        "argument": "-d3d10",
+        "platform": "Windows Only",
+        "effect": "The game is forced to use DX10 instead of DX11 by sm4. This will reduce the graphics engine to a lesser version, reducing some graphics, but raising the framerate."
+      },
+      {
+        "argument": "?DestroyUnconnectedWaterPipes=true",
+        "platform": "All",
+        "effect": "After two days real-time the pipes will auto-destroy if unconnected to any non-pipe (directly or indirectly) and no allied player is nearby."
+      },
+      {
+        "argument": "?DisableImprintDinoBuff=true",
+        "platform": "",
+        "effect": "Use this to disable the Dino Imprinting-Player Stat Bonus, if you don't like it (where whomever specifically imprinted on the Dino, and Raised it to have an Imprinting Quality, gets extra Damage/Resistance buff)"
+      },
+      {
+        "argument": "-EnableIdlePlayerKick",
+        "platform": "All",
+        "effect": "Cause characters that have not moved or interacted within the KickIdlePlayersPeriod to be kicked."
+      },
+      {
+        "argument": "?EnableExtraStructurePreventionVolumes=true",
+        "platform": "All",
+        "effect": "Use this to completely disable building in specific resource-rich areas, in particular setup on TheIsland around the major mountains."
+      },
+      {
+        "argument": "?ExtinctionEventTimeInterval=2592000",
+        "platform": "All",
+        "effect": "Use this to enable extinction for 30 days.  The number is the time in seconds."
+      },
+      {
+        "argument": "?FastDecayUnsnappedCoreStructures=true",
+        "platform": "",
+        "effect": "Will decay unsnapped foundations/pillars at 5x speed.Introduced in patch 245.987"
+      },
+      {
+        "argument": "-ForceAllowCaveFlyers",
+        "platform": "All",
+        "effect": "Force Flyer dinos to be allowed into caves (Flyers able to go into caves by default on custom maps)"
+      },
+      {
+        "argument": "?ForceFlyerExplosives=true",
+        "platform": "All",
+        "effect": "Flyer (except Quetzal and Wyvern can't fly with C4 attached to it. Set this parameter to true to let them still fly.Introduced in patch 252.83"
+      },
+      {
+        "argument": "-ForceRespawnDinos",
+        "platform": "All",
+        "effect": "Launch with this command to destroy all wild creatures on a startup. (this will only destroy wild creatures that are NOT currently being tamed)Introduced in patch 216.0"
+      },
+      {
+        "argument": "-gameplaylogging",
+        "platform": "All",
+        "effect": "Survival of the Fittest servers can launch with this commandline option to output a dated log file to \\Saved folder, which will contain a timestamped kill & winners log listing steam id, steam name, character name, etc. Handy for automatic Tournament records…"
+      },
+      {
+        "argument": "-insecure",
+        "platform": "Windows Only",
+        "effect": "Disable Valve Anti-Cheat (VAC) system."
+      },
+      {
+        "argument": "-lowmemory",
+        "platform": "All",
+        "effect": "Launch options that reduces graphics and audio effects to save about 800 MB RAM, likely enabling 4GB RAM players to get past infinite-loading screens"
+      },
+      {
+        "argument": "-MapModID=#########",
+        "platform": "All",
+        "effect": "Dedicated servers can now optionally load custom maps via ModID diectly, rather than having to specify the map name directly, using this syntax (where the MapModID is the Steam Workshop FileID of your custom map, and the GameModIds are the Id’s of the stacked mods you wish to use, in order)Introduced in patch 193.0"
+      },
+      {
+        "argument": "?MaxPersonalTamedDinos=Number",
+        "platform": "",
+        "effect": "Activates a per-tribe dino tame limit. (500 on official servers)Introduced in patch 255.0"
+      },
+      {
+        "argument": "?MinimumDinoReuploadInterval=xxxx",
+        "platform": "All",
+        "effect": "Number of seconds cooldown between allowed Dino re-uploads (defaults to 0, set to 43200 on Official Servers which is 12 hours)."
+      },
+      {
+        "argument": "-noantispeedhack",
+        "platform": "All",
+        "effect": "Anti speedhack detection is now enabled by default — to disable it, use this server commandlineIntroduced in patch 218.5"
+      },
+      {
+        "argument": "-NoBattlEye",
+        "platform": "",
+        "effect": "Run server without BattleEye"
+      },
+      {
+        "argument": "-NoBiomeWalls",
+        "platform": "",
+        "effect": "Eliminates the upcoming-Biome-change area wall effects as introduced in an unversioned addition of v241.5.Introduced in patch 242.7"
+      },
+      {
+        "argument": "-nocombineclientmoves",
+        "platform": "All",
+        "effect": "Server player-move-physics optimization is now enabled by default (improves perf) — to disable it, use this server commandlineIntroduced in patch 218.5"
+      },
+      {
+        "argument": "-nofishloot",
+        "platform": "All",
+        "effect": "disable non-meat Fish Loot when using Fishing RodIntroduced in patch 245.9"
+      },
+      {
+        "argument": "-noninlinesaveload",
+        "platform": "All",
+        "effect": "Fixed a savegame corruption case with large savegames: this is experimental, so try with this command, if you have any saves that don’t load. We’ll formally roll this loader change out in a subsequent patch after we’re 100% certain it has no side effects."
+      },
+      {
+        "argument": "-nomansky",
+        "platform": "All",
+        "effect": "Lots of detailed sky features are disabled, such as clouds and starry night sky. This decreases all of those but you can still have them. You still obtain the stars, the sun, and the moon. This just helps you remove the sparkling stars that make you sightless at night"
+      },
+      {
+        "argument": "-nomemorybias",
+        "platform": "",
+        "effect": "Reduced client game memory usage by about 600 MB system and 600 MB GPU RAM! (all meshes now stream LOD's dynamically). This could potentially have a small runtime performance impact, so to use the old method (more RAM usage but no potential performance loss), launch with -nomemorybias"
+      },
+      {
+        "argument": "?NonPermanentDiseases=true",
+        "platform": "",
+        "effect": "This will make Diseases not permanent (you will then lose them if you respawn)."
+      },
+      {
+        "argument": "-NotifyAdminCommandsInChat",
+        "platform": "",
+        "effect": ""
+      },
+      {
+        "argument": "-oldsaveformat",
+        "platform": "",
+        "effect": "Defaulted to using \"new save format\", which is approximately 4x faster and 50% smaller. If you want to use the old save format, launch with -oldsaveformat."
+      },
+      {
+        "argument": "?OnlyAutoDestroyCoreStructures=true",
+        "platform": "",
+        "effect": "You can launch an autodestroy enabled server with this opion to prevent any non-core/non-foundation structures from autodestroying (however they'll still get autodestroyed if a floor that they're on gets autodestroyed, of course). Official PvE Servers use this option.Introduced in patch 245.989"
+      },
+      {
+        "argument": "?OnlyDecayUnsnappedCoreStructures=true",
+        "platform": "",
+        "effect": "If set, only unsnapped core structures will decay. Useful for eliminating lone pillar/foundation spam on PvP Servers.Introduced in patch 245.986"
+      },
+      {
+        "argument": "?OverrideOfficialDifficulty=5.0",
+        "platform": "",
+        "effect": "Allows you to override the default server difficulty level of 4 with 5 to match the new official server difficulty level.Introduced in patch 247.95"
+      },
+      {
+        "argument": "?OverrideStructurePlatformPrevention=true",
+        "platform": "",
+        "effect": "Use this override if you want turret or spike structures to be buildable and functional on platform saddles.Introduced in patch 242.0, changed in patch 247.999"
+      },
+      {
+        "argument": "?OxygenSwimSpeedStatMultiplier=1.0",
+        "platform": "",
+        "effect": "Use this to set how swim speed is multiplied by level spent in oxygen. The value was reduced by 80% in 256.0.Introduced in patch 256.3"
+      },
+      {
+        "argument": "?PreventDiseases=true",
+        "platform": "",
+        "effect": "This will completely disable Diseases on the server. (thus far just 'Swamp Fever')."
+      },
+      {
+        "argument": "?PreventDownloadSurvivors=False?PreventDownloadItems=False?PreventDownloadDinos=False?PreventUploadSurvivors=False?PreventUploadItems=False?PreventUploadDinos=False",
+        "platform": "",
+        "effect": "Prevent Cross-ARK Data TransferIntroduced in patch 246.0"
+      },
+      {
+        "argument": "-PreventHibernation",
+        "platform": "",
+        "effect": "In both Single Player and Non-Dedicated Servers creatures in inactive zones are in hibernation instead of in stasis. Use this option to prevent hibernation at the cost of performance and memory usage.Introduced in patch 259.0"
+      },
+      {
+        "argument": "?PreventOfflinePvP=true",
+        "platform": "",
+        "effect": "Use this to enable the offline raiding prevention option."
+      },
+      {
+        "argument": "?PreventOfflinePvPInterval=900",
+        "platform": "",
+        "effect": "That would be a 15 min wait before a tribe/players dinos/structures become invulnerable/inactive after they log off. (if Tribe, requires ALL Tribe members logged off!)"
+      },
+      {
+        "argument": "?PreventSpawnAnimations=false",
+        "platform": "",
+        "effect": "Setting to true lets player characters (re)spawn without the wake up animation.Introduced in patch 261.0"
+      },
+      {
+        "argument": "?PvEAllowStructuresAtSupplyDrops=false",
+        "platform": "",
+        "effect": "Set to true to allow building near supply drop points in PvE mode.Introduced in patch 247.999"
+      },
+      {
+        "argument": "?PvEDinoDecayPeriodMultiplier=1.0",
+        "platform": "",
+        "effect": "Dino PvE Auto-Claim time multiplierIntroduced in patch 241.4"
+      },
+      {
+        "argument": "?PvPDinoDecay=true",
+        "platform": "",
+        "effect": "Set to true to prevent dinosaurs from decaying while the Offline Raiding Prevention is active."
+      },
+      {
+        "argument": "?PvPStructureDecay=true",
+        "platform": "",
+        "effect": "Set to true to prevent structure from decaying while the Offline Raiding Prevention is active.Introduced in patch 206.0"
+      },
+      {
+        "argument": "?RCONEnabled=True",
+        "platform": "",
+        "effect": "Enables RCON, needs ?RCONPort=32330 and ?ServerAdminPassword=123 to workIntroduced in patch 185.0"
+      },
+      {
+        "argument": "?RCONPort=32330",
+        "platform": "",
+        "effect": "specifies the connection port for the RCON is needed for RCOn to work, you need to manually enable the specified port, any not used port can be usedIntroduced in patch 185.0"
+      },
+      {
+        "argument": "?ShowFloatingDamageText=true",
+        "platform": "",
+        "effect": "Use this to enable RPG-style popup text stat mode."
+      },
+      {
+        "argument": "-server",
+        "platform": "?",
+        "effect": "?"
+      },
+      {
+        "argument": "?ServerAdminPassword=passwort",
+        "platform": "",
+        "effect": "If specified, players must provide this password (via the in-game console) to gain access to administrator commands on the server. Also used to log in via RCON."
+      },
+      {
+        "argument": "-servergamelog",
+        "platform": "All",
+        "effect": "Enable Server Admin Logs (including RCON support) use RCON command “getgamelog” to print 100 entries at a time also outputs to dated file in in “\\Logs”, adjust max length of RCON buffer with commandline: “?RCONServerGameLogBuffer=600”Introduced in patch 224.0"
+      },
+      {
+        "argument": "-servergamelogincludetribelogs",
+        "platform": "",
+        "effect": ""
+      },
+      {
+        "argument": "-ServerRCONOutputTribeLogs",
+        "platform": "",
+        "effect": "Allows tribe chat to be displayed in rcon, in addition to global chat."
+      },
+      {
+        "argument": "-sm4",
+        "platform": "Windows Only",
+        "effect": "The game is forced to use Shader Model 4 instead of the Shader Model 5 as usual. Well, there is no much difference, the game still looks and feels the same, but you can obtain better performance (Windows only?) (reported to increase frames but changes the game lighting)"
+      },
+      {
+        "argument": "-StasisKeepControllers",
+        "platform": "",
+        "effect": "AI Controllers to once again be destroyed on Stasis, too much memory overhead to keeping them around on large maps. For servers with a lot of RAM, they can now optionally gain performance by running with this to keep the AI's in memory."
+      },
+      {
+        "argument": "-StructureDestructionTag=DestroySwampSnowStructures",
+        "platform": "All",
+        "effect": "One-Time Auto-Structure Demolish on Swamp and Snow Zones: To do this, which you can only execute once after updating to v216, run your server or game with this commandline"
+      },
+      {
+        "argument": "?TheMaxStructuresInRange=10500",
+        "platform": "",
+        "effect": "new value for maximum allowed structures on a server. replaced NewMaxStructuresInRangeIntroduced in patch 252.1"
+      },
+      {
+        "argument": "?TribeLogDestroyedEnemyStructures=true",
+        "platform": "",
+        "effect": "By default enemy structure destruction (for the victim tribe) is not displayed in the tribe Logs, set this to true to enable it.Introduced in patch 247.93"
+      },
+      {
+        "argument": "-USEALLAVAILABLECORES",
+        "platform": "All",
+        "effect": "All of your CPU cores will be used, if all of them are not being utilized after using this launch option, then try to disable it!"
+      },
+      {
+        "argument": "-usecache",
+        "platform": "All",
+        "effect": "~70% faster loading speed option. Choose “Experiment Fast Load Cache” launch option (use add “-usecache” to your launch commandline manually). After the first & second times that you start the game & load will be still be slow, but the third time onwards will be fast. This may be deprecated, as of 188.2 as it was added, by default, for the PrimalData.  It was also supposed to be added to all maps, but has never been clarified as to if this occurred."
+      },
+      {
+        "argument": "?UseOptimizedHarvestingHealth=true",
+        "platform": "",
+        "effect": "\"optimized\" server with high HarvestAmountMultiplier (but less rare items)."
+      },
+      {
+        "argument": "?bRawSockets",
+        "platform": "?",
+        "effect": "Direct UDP socket connections rather than Steam P2P, for significantly increased server network performance. Need to manually open ports 7777 & 7778 if you do so in order for your server to accept connections.Introduced in patch 213.0"
+      },
+      {
+        "argument": "-nonetthreading",
+        "platform": "",
+        "effect": "option for bRawSockets servers to only utilize a single thread for networking (useful to improve performance for machines with more servers than cpu cores, on Linux in particular)Introduced in patch 271.15 seems to be deprecated with patch 271.17"
+      },
+      {
+        "argument": "-forcenetthreading",
+        "platform": "",
+        "effect": "Defaulted dedicated server ?bRawSockets mode to not use threaded networking, seemed to generally be a net performance loss in our analysis. Use this to forcefully enable it."
+      },
+      {
+        "argument": "-vday",
+        "platform": "All",
+        "effect": "Activate Valentine’s Day Event (2x Mateboost Range, 3x Mating Speed/Mating Recovery, 3x Baby/Egg Maturation Speed, 1/3rd Baby Food Consumption).Possibly deprecated; use -ActiveEvent=vday instead."
+      },
+      {
+        "argument": "-webalarm",
+        "platform": "All",
+        "effect": "Activate Web alarms when important things happen to a tribe, such as Tripwire Alarms going off and Babies being born. See Web Notifications for details.Introduced in patch 243.0"
+      },
+      {
+        "argument": "-exclusivejoin",
+        "platform": "All",
+        "effect": "Activate a whitelist only mode on the server that only lets players join if added to the allow list. Not to be confused with \"Admin Whitelisting\" which uses \"AllowedCheaterSteamIDs.txt\" to allow players to cheat. This option uses \"PlayersJoinNoCheckList.txt\" to allow people to join but not give them cheats. If the file does not exist in your Linux/Win64 Binaries folder, create it and add the Steam64 IDs of the players you wish to be allowed to join your server.  Path; \"\\ShooterGame\\Binaries\\Win64\\\" \"/ShooterGame/Binaries/Linux/\".You will need to restart your server, if you add new lines to the file while it is running. You can however use \"Cheat AllowPlayerToJoinNoCheck 12345678901234567\" in game, to add a new player to the whitelist. This method will also save to the file, so you don't need to reboot the server."
+      },
+      {
+        "argument": "-ActiveEvent=<eventname>",
+        "platform": "PC",
+        "effect": "enables a specified event  Only one can be specified and active at a time    eventnameDescription    EasterAllows for the Easter Event to be activated    ArkaeologyAllows for the Arkaeology Event to be activated.    ExtinctionChroniclesAllows for the Extinction Chronicles Event to be activated.    WinterWonderlandAllows for Winter Wonderland 2019 Event to be activated.    vdayAllows for Love Evolved to be activated.    SummerAllows for Summer Bash 2019 Event to be activated.    FearEvolvedAllows for ARK: Fear Evolved 3 to be activated.   TurkeyTrialAllows for ARK: Turkey Trial 3 to be activated."
+      },
+      {
+        "argument": "?GameModIds=ModID1,ModID2",
+        "platform": "PC",
+        "effect": "Specifies the order and which mods are loaded, ModIDs need to be comma seperatedIntroduced in patch 190.0"
+      },
+      {
+        "argument": "?MaxTamedDinos=4000",
+        "platform": "",
+        "effect": "Sets the maximum number of tamed Dinos on a Server, this is a global cap.Introduced in patch 191.0"
+      },
+      {
+        "argument": "?SpectatorPassword=mypassword",
+        "platform": "",
+        "effect": "To use non-admin spectator, the server must specify a spectator password. Then any client can use these console commands: requestspectator <password> and stopspectating. See patch 191.0 for more information and hotkeys."
+      },
+      {
+        "argument": "?AllowCaveBuildingPVE=true",
+        "platform": "",
+        "effect": "If set to True, allows building in caves when PvE mode is also enabled.Introduced in patch 194.0, seems to have been removed from the command-line options before patch 241.5."
+      },
+      {
+        "argument": "?AdminLogging=true",
+        "platform": "",
+        "effect": "logs all admin commands to ingame chatIntroduced in patch 206.0"
+      },
+      {
+        "argument": "?ForceAllStructureLocking=true",
+        "platform": "",
+        "effect": "enabling this will default lock all structuresIntroduced in patch 222.0"
+      },
+      {
+        "argument": "?AutoDestroyOldStructuresMultiplier=1.0",
+        "platform": "",
+        "effect": "Server Option to allow Auto-Destroying Structures after sufficient \"no nearby Tribe\" time has passed (defined as a multiplier of the Allow Claim period). Useful for servers to clear off abandoned structures automatically over time if they wishIntroduced in patch 222.0"
+      },
+      {
+        "argument": "?RCONServerGameLogBuffer=600",
+        "platform": "",
+        "effect": "determines how many lines of gamelogs are send over RCONIntroduced in patch 224.0"
+      },
+      {
+        "argument": "?PreventTribeAlliances=true",
+        "platform": "",
+        "effect": "Enabling this will prevent tribes from creating AlliancesIntroduced in patch 243.0"
+      },
+      {
+        "argument": "?AllowRaidDinoFeeding",
+        "platform": "",
+        "effect": "To allow your Server's Titanosaurs to be permanently tamed (namely allow them to be Fed)However, note that TheIsland currently only spawns 3 Titanosaurs whatsoever, so 3 Tamed ones would ultimately block any more Wild ones from spawning.Introduced in patch 243.0"
+      },
+      {
+        "argument": "?AllowHitMarkers=false",
+        "platform": "",
+        "effect": "Use this to disable optional hitmarkers for ranged attacksIntroduced in patch 245.0"
+      },
+      {
+        "argument": "?ServerCrosshair=false",
+        "platform": "",
+        "effect": "Use this to disable the Crosshair on your ServerIntroduced in patch 245.0"
+      },
+      {
+        "argument": "?PreventMateBoost=true",
+        "platform": "",
+        "effect": "Option to disable Dino Mate BoostIntroduced in patch 247.0"
+      },
+      {
+        "argument": "?ServerAutoForceRespawnWildDinosInterval",
+        "platform": "",
+        "effect": "Force Respawn of Wild Dinos on Server Restart. Enabled by default on official servers, this will force weekly respawns of dinos on all servers to prevent certain dino types (like the Basilo and Spino) from becoming depopulated on long running servers.NOTE in some cases this may not work more than onceIntroduced in patch 265.0"
+      },
+      {
+        "argument": "?PersonalTamedDinosSaddleStructureCost=19",
+        "platform": "",
+        "effect": "determines the amount of dinoslots a platform saddle will use towards the tribe dino limitIntroduced in patch 265.0"
+      },
+      {
+        "argument": "-structurememopts",
+        "platform": "PC",
+        "effect": "enables structure memory optimizationsNOTE avoid using it when running structure-related mods (until they get updated)  as it can break the snappoints of these mod structuresIntroduced in patch 295.108"
+      },
+      {
+        "argument": "-nodinos",
+        "platform": "PC",
+        "effect": "prevents wild dinos from being spawnedNOTE you need to wipe dinos (cheat destroywilddinos) after adding this on a not fresh server"
+      },
+      {
+        "argument": "-noundermeshchecking",
+        "platform": "PC",
+        "effect": "Will turn off the anti meshing system entirelyIntroduced in patch 304.445"
+      },
+      {
+        "argument": "-noundermeshkilling",
+        "platform": "PC",
+        "effect": "Will turn off the anti meshing player kills (but still allow teleporting)Introduced in patch 304.445"
+      }
+    ]
+  },
+  "GameUserSettings.ini": {
+    "arguments": [
+      {
+        "argument": "<map_name>",
+        "type": "string",
+        "default": "None",
+        "effect": "(command line only) Specifies the map to use for gameplayNote: This option is mandatory and must be the first option specified on the command line. Map options are TheIsland, TheCenter (requires DLC), ScorchedEarth_P (requires DLC), Ragnarok (requires DLC), Aberration_P (requires DLC), Extinction (requires DLC), Valguero_P (requires DLC) and Genesis (requires DLC) NOTE: A Mod map may have a different map name then here specified, check the modpage or contact the author of the mod for the exact name.\n"
+      },
+      {
+        "argument": "listen",
+        "type": "N/A",
+        "default": "None",
+        "effect": "(command line only) Listen for (and accept) player connections from other systemsNote: This option is mandatory for multiplayer servers.\n"
+      },
+      {
+        "argument": "MaxTributeDinos",
+        "type": "integer",
+        "default": "20",
+        "effect": "Slots for uploaded creatures Note: Some player claimed maximum 273 to be safe cap and more will corrupt profile/cluster and lead to loose of all storaged creatures but it need to be checked\n"
+      },
+      {
+        "argument": "MaxTributeItems",
+        "type": "integer",
+        "default": "50",
+        "effect": "Slots for uploaded items and resources Note: Some player claimed maximum 154 to be safe cap and more will corrupt profile/cluster and lead to loose of all storaged items and resources but it need to be checked\n"
+      },
+      {
+        "argument": "alwaysNotifyPlayerJoined",
+        "type": "boolean",
+        "default": "False",
+        "effect": "Players will always get notified if someone joins the server\n"
+      },
+      {
+        "argument": "alwaysNotifyPlayerLeft",
+        "type": "boolean",
+        "default": "False",
+        "effect": "Players will always get notified if someone leaves the server\n"
+      },
+      {
+        "argument": "allowThirdPersonPlayer",
+        "type": "boolean",
+        "default": "False",
+        "effect": "Enables 3rd Person view\n"
+      },
+      {
+        "argument": "globalVoiceChat",
+        "type": "boolean",
+        "default": "False",
+        "effect": "Voice chat turns global\n"
+      },
+      {
+        "argument": "ShowMapPlayerLocation",
+        "type": "boolean",
+        "default": "False",
+        "effect": "Show each player their own precise position when they view their map\n"
+      },
+      {
+        "argument": "noTributeDownloads",
+        "type": "boolean",
+        "default": "False",
+        "effect": "Disables downloading characters from other servers\n"
+      },
+      {
+        "argument": "proximityChat",
+        "type": "boolean",
+        "default": "False",
+        "effect": "Only players near each other can see their chat messages\n"
+      },
+      {
+        "argument": "serverPVE",
+        "type": "boolean",
+        "default": "False",
+        "effect": "Disables PvP, enables PvE\n"
+      },
+      {
+        "argument": "serverHardcore",
+        "type": "boolean",
+        "default": "False",
+        "effect": "Enables hardcore mode (player characters revert to level 1 upon death)\n"
+      },
+      {
+        "argument": "serverForceNoHud",
+        "type": "boolean",
+        "default": "False",
+        "effect": "HUD always disabled\n"
+      },
+      {
+        "argument": "DisableStructureDecayPvE",
+        "type": "boolean",
+        "default": "False",
+        "effect": "Disable the gradual (7 days) decay of player structuresIntroduced in patch 173.0\n"
+      },
+      {
+        "argument": "DisableDinoDecayPvE",
+        "type": "boolean",
+        "default": "False",
+        "effect": "Disable the gradual (7 days) decay of dinosaur ownership. Without this set to true, every dinosaur can be claimed by any player.Introduced in patch 206.0\n"
+      },
+      {
+        "argument": "AllowFlyerCarryPvE",
+        "type": "boolean",
+        "default": "False",
+        "effect": "Permit flying dinosaurs to pick up other dinosaurs and players when mounted by a player in PvEIntroduced in patch 173.0 but changed from bAllowFlyerCarryPVE to AllowFlyerCarryPVE\n"
+      },
+      {
+        "argument": "TheMaxStructuresInRange",
+        "type": "integer",
+        "default": "10500",
+        "effect": "Specifies the maximum number of structures that can be constructed within a certain (currently hard-coded) range.Introduced in patch 252.1 replacing the old value NewMaxStructuresInRange\n"
+      },
+      {
+        "argument": "bAllowPlatformSaddleMultiFloors",
+        "type": "boolean",
+        "default": "False",
+        "effect": "Set to true to allow multiple platform floors.Introduced in patch 260.0\n"
+      },
+      {
+        "argument": "MaxPlayers",
+        "type": "integer",
+        "default": "70",
+        "effect": "Specifies the maximum number of players that can play on the server simultaneously. Must be placed under [/script/engine.gamesession] in GameUserSettings.ini to function when not used in the command line.\n"
+      },
+      {
+        "argument": "DifficultyOffset",
+        "type": "float",
+        "default": "0.2",
+        "effect": "Specifies the difficulty level.\n"
+      },
+      {
+        "argument": "ServerPassword",
+        "type": "string",
+        "default": "None",
+        "effect": "If specified, players must provide this password to join the server.\n"
+      },
+      {
+        "argument": "ServerAdminPassword",
+        "type": "string",
+        "default": "None",
+        "effect": "If specified, players must provide this password (via the in-game console) to gain access to administrator commands on the server.\n"
+      },
+      {
+        "argument": "SpectatorPassword",
+        "type": "string",
+        "default": "None",
+        "effect": "To use non-admin spectator, the server must specify a spectator password. Then any client can use these console commands: requestspectator <password> and stopspectating. See patch 191.0 for more information and hotkeys.\n"
+      },
+      {
+        "argument": "DayCycleSpeedScale",
+        "type": "float",
+        "default": "1.0",
+        "effect": "Specifies the scaling factor for the passage of time in the ARK, controlling how often day changes to night and night changes to day. The default value 1 provides the same cycle speed as the singleplayer experience (and the official public servers). Values lower than 1 slow down the cycle; higher values accelerate it. Base time when value is 1 appears to be 1 minute real time equals approx. 28 minutes game time. Thus, for an approximate 24 hour day/night cycle in game, use .035 for the value.\n"
+      },
+      {
+        "argument": "NightTimeSpeedScale",
+        "type": "float",
+        "default": "1.0",
+        "effect": "Specifies the scaling factor for the passage of time in the ARK during night time. This value determines the length of each night, relative to the length of each day (as specified by DayTimeSpeedScale. Lowering this value increases the length of each night.\n"
+      },
+      {
+        "argument": "DayTimeSpeedScale",
+        "type": "float",
+        "default": "1.0",
+        "effect": "Specifies the scaling factor for the passage of time in the ARK during the day. This value determines the length of each day, relative to the length of each night (as specified by NightTimeSpeedScale. Lowering this value increases the length of each day.\n"
+      },
+      {
+        "argument": "DinoDamageMultiplier",
+        "type": "float",
+        "default": "1.0",
+        "effect": "Specifies the scaling factor for the damage dinosaurs deal with their attacks. The default value 1 provides normal damage. Higher values increase damage. Lower values decrease it.\n"
+      },
+      {
+        "argument": "PlayerDamageMultiplier",
+        "type": "float",
+        "default": "1.0",
+        "effect": "Specifies the scaling factor for the damage players deal with their attacks. The default value 1 provides normal damage. Higher values increase damage. Lower values decrease it.\n"
+      },
+      {
+        "argument": "StructureDamageMultiplier",
+        "type": "float",
+        "default": "1.0",
+        "effect": "Specifies the scaling factor for the damage structures deal with their attacks (i.e. spiked walls). The default value 1 provides normal damage. Higher values increase damage. Lower values decrease it.\n"
+      },
+      {
+        "argument": "PlayerResistanceMultiplier",
+        "type": "float",
+        "default": "1.0",
+        "effect": "Specifies the scaling factor for the resistance to damage players receive when attacked. The default value 1 provides normal damage. Higher values decrease resistance, increasing damage per attack. Lower values increase it, reducing damage per attack. A value of 0.5 results in a player taking half damage while a value of 2.0 would result in taking double normal damage.\n"
+      },
+      {
+        "argument": "DinoResistanceMultiplier",
+        "type": "float",
+        "default": "1.0",
+        "effect": "Specifies the scaling factor for the resistance to damage dinosaurs receive when attacked. The default value 1 provides normal damage. Higher values decrease resistance, increasing damage per attack. Lower values increase it, reducing damage per attack. A value of 0.5 results in a dino taking half damage while a value of 2.0 would result in a dino taking double normal damage.\n"
+      },
+      {
+        "argument": "StructureResistanceMultiplier",
+        "type": "float",
+        "default": "1.0",
+        "effect": "Specifies the scaling factor for the resistance to damage structures receive when attacked. The default value 1 provides normal damage. Higher values decrease resistance, increasing damage per attack. Lower values increase it, reducing damage per attack. A value of 0.5 results in a structure taking half damage while a value of 2.0 would result in a structure taking double normal damage.\n"
+      },
+      {
+        "argument": "XPMultiplier",
+        "type": "float",
+        "default": "1.0",
+        "effect": "Specifies the scaling factor for the experience received by players, tribes and dinosaurs for various actions. The default value 1 provides the same amounts of experience as in the singleplayer experience (and official public servers). Higher values increase XP amounts awarded for various actions; lower values decrease it.In 253.0 an additional hardcoded multiplier of 2 was activated.\n"
+      },
+      {
+        "argument": "PvEStructureDecayPeriodMultiplier",
+        "type": "float",
+        "default": "1.0",
+        "effect": "Specifies the scaling factor for the decay rate of player structures in PvE mode. The specific effect(s) of this option and its range of valid values are unknown as of this writing.[1]\n"
+      },
+      {
+        "argument": "PvEStructureDecayDestructionPeriod",
+        "type": "",
+        "default": "0",
+        "effect": "Specifies the time required for player structures to decay in PvE mode. The specific effect(s) of this option and its range of valid values are unknown as of this writing.[1]\n"
+      },
+      {
+        "argument": "PvEDinoDecayPeriodMultiplier",
+        "type": "float",
+        "default": "1.0",
+        "effect": "... Introduced in patch 206.0\n"
+      },
+      {
+        "argument": "TamingSpeedMultiplier",
+        "type": "float",
+        "default": "1.0",
+        "effect": "Specifies the scaling factor for dinosaur taming speed. Higher values make taming faster.\n"
+      },
+      {
+        "argument": "HarvestAmountMultiplier",
+        "type": "float",
+        "default": "1.0",
+        "effect": "Specifies the scaling factor for yields from all harvesting activities (chopping down trees, picking berries, carving carcasses, mining rocks, etc.). Higher values increase the amount of materials harvested with each strike.\n"
+      },
+      {
+        "argument": "HarvestHealthMultiplier",
+        "type": "float",
+        "default": "1.0",
+        "effect": "Specifies the scaling factor for the \"health\" of items that can be harvested (trees, rocks, carcasses, etc.). Higher values increase the amount of damage (i.e. \"number of strikes\") such objects can withstand before being destroyed, which results in higher overall harvest yields.\n"
+      },
+      {
+        "argument": "MaxPlatformSaddleStructureLimit",
+        "type": "integer",
+        "default": "",
+        "effect": "Changes the maximum number of platformed-creatures/rafts allowed on the ARK (a potential performance cost)Example: MaxPlatformSaddleStructureLimit=10 would only allow 10 platform saddles / rafts across the entire arkIntroduced in patch 212.1\n"
+      },
+      {
+        "argument": "PerPlatformMaxStructuresMultiplier",
+        "type": "float",
+        "default": "1.0",
+        "effect": "Higher number increases (on a percentage scale) max number of items place-able on saddles and raftsExample: PerPlatformMaxStructuresMultiplier=1.5(added Patch 211.0)\n"
+      },
+      {
+        "argument": "ResourcesRespawnPeriodMultiplier",
+        "type": "float",
+        "default": "1.0",
+        "effect": "Specifies the scaling factor for the respawn rate for resource nodes (trees, rocks, bushes, etc.). Lower values cause nodes to respawn more frequently.\n"
+      },
+      {
+        "argument": "PlayerCharacterWaterDrainMultiplier",
+        "type": "float",
+        "default": "1.0",
+        "effect": "Specifies the scaling factor for player characters' water consumption. Higher values increase water consumption (player characters get thirsty faster).\n"
+      },
+      {
+        "argument": "PlayerCharacterFoodDrainMultiplier",
+        "type": "float",
+        "default": "1.0",
+        "effect": "Specifies the scaling factor for player characters' food consumption. Higher values increase food consumption (player characters get hungry faster).\n"
+      },
+      {
+        "argument": "PlayerCharacterStaminaDrainMultiplier",
+        "type": "float",
+        "default": "1.0",
+        "effect": "Specifies the scaling factor for player characters' stamina consumption. Higher values increase stamina consumption (player characters get tired faster).\n"
+      },
+      {
+        "argument": "PlayerCharacterHealthRecoveryMultiplier",
+        "type": "float",
+        "default": "1.0",
+        "effect": "Specifies the scaling factor for player characters' health recovery. Higher values increase the recovery rate (player characters heal faster).\n"
+      },
+      {
+        "argument": "DinoCharacterFoodDrainMultiplier",
+        "type": "float",
+        "default": "1.0",
+        "effect": "Specifies the scaling factor for dinosaurs' food consumption. Higher values increase food consumption (dinosaurs get hungry faster). It also affects the taming-times.\n"
+      },
+      {
+        "argument": "DinoCharacterStaminaDrainMultiplier",
+        "type": "float",
+        "default": "1.0",
+        "effect": "Specifies the scaling factor for dinosaurs' stamina consumption. Higher values increase stamina consumption (dinosaurs get tired faster).\n"
+      },
+      {
+        "argument": "DinoCharacterHealthRecoveryMultiplier",
+        "type": "float",
+        "default": "1.0",
+        "effect": "Specifies the scaling factor for dinosaurs' health recovery. Higher values increase the recovery rate (dinosaurs heal faster).\n"
+      },
+      {
+        "argument": "DinoCountMultiplier",
+        "type": "float",
+        "default": "1.0",
+        "effect": "Specifies the scaling factor for dinosaur spawns. Higher values increase the number of dinosaurs spawned throughout the ARK.\n"
+      },
+      {
+        "argument": "AllowCaveBuildingPvE",
+        "type": "boolean",
+        "default": "False",
+        "effect": "If set to True, allows building in caves when PvE mode is also enabled.Introduced in patch 194.0\n"
+      },
+      {
+        "argument": "BanListURL",
+        "type": "URL",
+        "default": "\"http://arkdedicated.com/banlist.txt\"",
+        "effect": "Use the official global ban list, or point to any online ban list that you want. Must be enclosed in double quotes. Before 279.233 the URL was http://playark.com/banlist.txt Introduced in patch 201.0\n"
+      },
+      {
+        "argument": "PvPStructureDecay",
+        "type": "boolean",
+        "default": "false",
+        "effect": "Turns off structure decay on PvP servers.\n"
+      },
+      {
+        "argument": "TributeItemExpirationSeconds",
+        "type": "integer",
+        "default": "86400",
+        "effect": "Set the expiration timer for uploaded items.\n"
+      },
+      {
+        "argument": "TributeDinoExpirationSeconds",
+        "type": "integer",
+        "default": "86400",
+        "effect": "Set the expiration timer for uploaded dinos.\n"
+      },
+      {
+        "argument": "TributeCharacterExpirationSeconds",
+        "type": "integer",
+        "default": "86400",
+        "effect": "Set the expiration timer for uploaded survivors.\n"
+      },
+      {
+        "argument": "AutoSavePeriodMinutes",
+        "type": "float",
+        "default": "15.0",
+        "effect": "Set interval for automatic saves\n"
+      },
+      {
+        "argument": "NPCNetworkStasisRangeScalePlayerCountStart",
+        "type": "",
+        "default": "",
+        "effect": "\n"
+      },
+      {
+        "argument": "NPCNetworkStasisRangeScalePlayerCountEnd",
+        "type": "",
+        "default": "",
+        "effect": "\n"
+      },
+      {
+        "argument": "NPCNetworkStasisRangeScalePercentEnd",
+        "type": "float",
+        "default": "",
+        "effect": "\n"
+      },
+      {
+        "argument": "CrossARKAllowForeignDinoDownloads",
+        "type": "boolean",
+        "default": "false",
+        "effect": "if set to true, you will be able to tribute download non-native creatures on the Aberration mapIntroduced in patch 275.0\n"
+      },
+      {
+        "argument": "DisablePvEGamma",
+        "type": "boolean",
+        "default": "false",
+        "effect": "Prevents use of console command \"gamma\" in PvE modeIntroduced in patch 207.0\n"
+      },
+      {
+        "argument": "EnablePvPGamma",
+        "type": "boolean",
+        "default": "false",
+        "effect": "Allow use of console command \"gamma\" in PvP modeIntroduced in patch 174.3\n"
+      },
+      {
+        "argument": "TribeNameChangeCooldown",
+        "type": "integer",
+        "default": "15",
+        "effect": "Cooldown, in minutes, in between tribe name changesIntroduced in patch 278.0\n"
+      },
+      {
+        "argument": "AllowHideDamageSourceFromLogs",
+        "type": "boolean",
+        "default": "false",
+        "effect": "Allows the hiding of damage sources in tribe logs.Introduced in patch 278.0\n"
+      },
+      {
+        "argument": "RandomSupplyCratePoints",
+        "type": "boolean",
+        "default": "false",
+        "effect": "If true, supply drops are in random locations. NOTE: This setting is known to cause artifacts becoming inaccesable on [Ragnarok] if activeIntroduced in patch 278.0\n"
+      },
+      {
+        "argument": "DisableWeatherFog",
+        "type": "boolean",
+        "default": "false",
+        "effect": "If true, disables fog.Introduced in patch 278.0\n"
+      },
+      {
+        "argument": "ActiveMods",
+        "type": "integer",
+        "default": "ModID",
+        "effect": "Specifies the order and which mods are loaded, ModIDs need to be comma seperated and in one line Introduced in patch 190.0\n"
+      },
+      {
+        "argument": "AdminLogging",
+        "type": "boolean",
+        "default": "true",
+        "effect": "logs all admin commands to ingame chatIntroduced in patch 206.0\n"
+      },
+      {
+        "argument": "ClampResourceHarvestDamage",
+        "type": "boolean",
+        "default": "false",
+        "effect": "Limit the damage caused by a dino to a resource for harvesting.Introduced in patch 182.0\n"
+      },
+      {
+        "argument": "ItemStackSizeMultiplier",
+        "type": "float",
+        "default": "1.0",
+        "effect": "allow increasing or decreasing global item stack size, this means all default stacksizes will be multiplied by the value given Introduced in patch 291.100\n"
+      },
+      {
+        "argument": "PlatformSaddleBuildAreaBoundsMultiplier",
+        "type": "float",
+        "default": "1.0",
+        "effect": "increasing the number allows structures being placed further away from the platform\n"
+      },
+      {
+        "argument": "bForceCanRideFliers",
+        "type": "boolean",
+        "default": "false",
+        "effect": "allows flyers to be used on maps where they normally are disabled NOTE: if you set it to false it will disable flyers on any map\n"
+      },
+      {
+        "argument": "AllowTekSuitPowersInGenesis",
+        "type": "boolean",
+        "default": "false",
+        "effect": "enable or disable TEK suit powers in Genesis Part 1\n"
+      },
+      {
+        "argument": "EnableCryoSicknessPVE",
+        "type": "boolean",
+        "default": "false",
+        "effect": "Enable/Disable Crypod cooldown timer when deploying a creature.  If false, deployed creatures do not experience cryosickness.Introduced in patch 307.56\n"
+      },
+      {
+        "argument": "EnableCryopodNerf",
+        "type": "boolean",
+        "default": "false",
+        "effect": "Enable/Disable Cryosickness when deploying a creature. The following settings need to be set also: CryopodNerfDamageMult & CryopodNerfDuration.  If true, there is no Crypod cooldown timer, and creatures do not become unconscious.Introduced in patch 309.53\n"
+      },
+      {
+        "argument": "CryopodNerfDuration",
+        "type": "integer",
+        "default": "10",
+        "effect": "Amount of time, in seconds, Cryosickness lasts after deploying a creature from a Cryopod. If EnableCryoSicknessPVE is enabled, it will override this line.Introduced in patch 309.53\n"
+      },
+      {
+        "argument": "CryopodNerfDamageMult",
+        "type": "float",
+        "default": "0.01",
+        "effect": "Reduces the amount of damage delt by the creature after it is deployed from the cryopod, as a percentage of total damage output, and for the length of time set by CryopodNerfDuration.  CryopodNerfDuration needs a valid value.  CryopodNerfDamageMult=0.01 means 99% of the damage is removed Introduced in patch 309.53\n"
+      },
+      {
+        "argument": "CryopodNerfIncomingDamageMultPercent",
+        "type": "float",
+        "default": "0.25",
+        "effect": "Increases the amount of damage taken by the creature after it is deployed from the cryopod, as a percentage of total damage received, and for the length of time set by CryopodNerfDuration. CryopodNerfIncomingDamageMultPercent=0.25 means a realeased tame takes 25% more damage while the debuff lasts Introduced in patch 310.11\n"
+      },
+      {
+        "argument": "MaxTamedDinos",
+        "type": "integer",
+        "default": "4000",
+        "effect": "Sets the maximum number of tamed Dinos on a Server, this is a global cap.Introduced in patch 191.0\n"
+      },
+      {
+        "argument": "NewMaxStructuresInRange",
+        "type": "integer",
+        "default": "6000",
+        "effect": "Specifies the maximum number of structures that can be constructed within a certain (currently hard-coded) range.Introduced in patch 188.0 and deprecated with patch 252.1 by TheMaxStructuresInRange\n"
+      },
+      {
+        "argument": "MaxStructuresInRange",
+        "type": "integer",
+        "default": "1300?",
+        "effect": "Specifies the maximum number of structures that can be constructed within a certain (currently hard-coded) range.Introduced in patch 173.0 and deprecated with patch 188.0 by NewMaxStructuresInRange\n"
+      }
+    ]
+  }
+}

@@ -3,23 +3,23 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.IO;
+using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using ARKSS_Gui.Annotations;
 using ARKSS_Gui.Buisiness;
+using MaterialDesignThemes.Wpf;
 using Microsoft.VisualStudio.PlatformUI;
-using Salaros.Configuration;
 using Serilog;
 using Serilog.Core;
 using Serilog.Events;
-using Serilog.Formatting.Compact;
 using Path = System.IO.Path;
 
 namespace ARKSS_Gui
 {
-    public partial class MainWindow : Window, INotifyPropertyChanged
+    public partial class MainWindow : INotifyPropertyChanged
     {
         private readonly ILogger _logger;
         private MainViewModel _model;
@@ -60,26 +60,16 @@ namespace ARKSS_Gui
 
             Model = new MainViewModel();
 
-            foreach (var server in LoadServersSettings()) Model.ServerFactory.AddServer(server, true);
+            foreach (var server in LoadServersSettings()) 
+                Model.ServerFactory.AddServer(server, true);
 
             Model.SelectedServerSettingsIndex = 0;
         }
 
-        private IEnumerable<ArkServer> LoadServersSettings()
+        private static IEnumerable<ArkServer> LoadServersSettings()
         {
-            foreach (var dir in Directory.GetDirectories(Properties.Settings.Default.ServersDir))
-            {
-                var shooterGame = Path.Combine(dir, "ShooterGame", "Binaries", "Win64", "ShooterGameServer.exe");
-                if (!File.Exists(shooterGame))
-                    continue;
-
-                var gameUserSettings = new ConfigParser(Path.Combine(dir, "ShooterGame", "Saved", "Config", "WindowsServer", "GameUserSettings.ini"));
-
-                var tab = new ArkServer(gameUserSettings.GetValue("SessionSettings", "SessionName"), dir,
-                    gameUserSettings.GetValue("ServerSettings", "ActiveMods"));
-
-                yield return tab;
-            }
+            return from dir in Directory.GetDirectories(Properties.Settings.Default.ServersDir)
+                select new ArkServer(dir);
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -148,7 +138,7 @@ namespace ARKSS_Gui
 
         private void New_Execute(object parameter)
         {
-            ServerFactory.AddServer(new ArkServer("New server", "", ""));
+            ServerFactory.AddServer(new ArkServer());
             SelectedServerSettingsIndex = ServerFactory.ServersSettings.Count - 1;
         }
 
